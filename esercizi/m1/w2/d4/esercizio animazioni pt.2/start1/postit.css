@@ -1,0 +1,49 @@
+body {
+    font: 2rem 'Indie Flower';
+}
+
+section {
+    background-color: gray;
+    margin: 20px auto;
+    padding-top: 15px ;
+    padding-bottom: 15px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+section h2 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+section div{
+    padding: 2em;
+    margin: 0.7em;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+}
+
+.yellow {
+    background-color: #FBFBC9;
+    background-image: linear-gradient(rgb(255, 255, 204) 0%, rgb(231, 231, 174) 75%, rgb(189, 189, 161) 93%);
+    transform: rotate(-4deg);
+}
+
+.green {
+    background-color: #C7F6CA;
+    background-image: linear-gradient(rgb(204, 255, 204) 0%, rgb(184, 219, 184) 75%, rgb(159, 181, 159) 93%);
+    transform: rotate(4deg);
+}
+
+.purple {
+    background-color: #C7C6EE;
+    background-image: linear-gradient(rgb(204, 204, 255) 0%, rgb(176, 176, 204) 75%, rgb(140, 140, 156) 93%);
+    transform: rotate(-7deg);
+}
+
+section div:hover{
+    transform: scale(1.25);
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+  z-index: 10;
+  cursor: pointer;
+}
