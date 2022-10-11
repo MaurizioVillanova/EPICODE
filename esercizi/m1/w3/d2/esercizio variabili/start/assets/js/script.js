@@ -3,7 +3,7 @@
 var nome1 = 'aldo';
 let ruolo = 'cliente';
 const piGreco = '3.14';
-var stampa = nome1+ ", " + ruolo + ", " + piGreco;
+var stampa = nome1 + ", " + ruolo + ", " + piGreco;
 document.getElementById('concatena').innerHTML = `${nome1}, ${ruolo}, ${piGreco}`;
 document.getElementById('concatena2').innerHTML = stampa;
 }
@@ -37,7 +37,7 @@ document.getElementById('final').innerHTML = nome2;
     var num3 = num -10;
     document.getElementById('valore2').innerHTML +=   `${num3},${--num3}`;
 
-var num4 =num * 3;
+var num4 = num * 3;
 document.getElementById('valore3').innerHTML += num4;
 
 var num5 = num / 3;
