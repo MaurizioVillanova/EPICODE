@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/css/style.css'>
+    <title>Calcolatrice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>La mia calcolatrice in JavaScript</h1>
+
+    <div class="container">
+        <div>
+            <input type="text" name="screen" id="result" class="screen">
+        </div>
+
+        <div class="bottoni">
+            <input type="button" id="7" value="7" onclick="n(this.id)" class="button">
+            <input type="button" id="8" value="8" onclick="n(this.id)" class="button">
+            <input type="button" id="9" value="9" onclick="n(this.id)" class="button">
+            <input type="button" id="/" value="/" onclick="n(this.id)" class="operatori">
+            <input type="button" id="4" value="4" onclick="n(this.id)" class="button">
+            <input type="button" id="5" value="5" onclick="n(this.id)" class="button">
+            <input type="button" id="6" value="6" onclick="n(this.id)" class="button">
+            <input type="button" id="*" value="*" onclick="n(this.id)" class="operatori">
+            <input type="button" id="1" value="1" onclick="n(this.id)" class="button">
+            <input type="button" id="2" value="2" onclick="n(this.id)" class="button">
+            <input type="button" id="3" value="3" onclick="n(this.id)" class="button">
+            <input type="button" id="-" value="-" onclick="n(this.id)" class="operatori">
+            <input type="button" value="C" onclick="clearScreen()" class="clear">
+            <input type="button" id="0" value="0" onclick="n(this.id)" class="button">
+            <input type="button" id="." value="." onclick="n(this.id)" class="button">
+            <input type="button" id="+" value="+" onclick="n(this.id)" class="operatori">
+            <input type="button"  id="off"  value="off"  class="turn">
+            <input type="button"  id="on"  value="on"  class="turn">
+            <input type="button" id="00" value="00" onclick="n(this.id)" off="button">
+            <input type="button" id="&#8730;" value="&#8730;" onclick="radice()" class="operatori">
+        </div>
+        <div>
+            <input type="button" value="=" onclick="solve()" id="uguale" class="uguale">=</input>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
