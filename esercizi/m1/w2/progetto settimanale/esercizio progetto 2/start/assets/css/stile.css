@@ -339,6 +339,6 @@ footer {
         width: 700px;
     }
     header {
-        justify-content: space-evenly;
+        justify-items: flex-start;
     }
 }
