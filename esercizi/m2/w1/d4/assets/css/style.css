@@ -1,0 +1,67 @@
+body {
+    font-family: verdana, sans-serif;
+}
+
+.dropbtn {
+    background-color: #1c15e7;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #37a0f0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.panel {
+    display: none;
+    position: absolute;
+    background-color: #907cf5;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: opx 8px 16px 0px rgba (0, 0, 0, 0.3);
+}
+
+.panel a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #caccd1
+}
+
+.mostra {
+    display: block;
+}
+
+#myDIV {
+    text-align: center;
+    color: red;
+}
+
+.mystyle {
+    font-size: 80px;
+}
+.cambia{
+    color: yellow;
+}
+
+/* When clicked on, add a background color and strike out text */
+.fatto {
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+.selezione {
+    color: #F00;
+}
