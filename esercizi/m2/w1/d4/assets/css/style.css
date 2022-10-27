@@ -57,7 +57,7 @@ body {
     color: yellow;
 }
 
-/* When clicked on, add a background color and strike out text */
+
 .fatto {
     text-decoration: line-through;
     opacity: 0.4;
