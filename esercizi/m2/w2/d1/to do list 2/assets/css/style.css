@@ -1,0 +1,14 @@
+body {
+    height: 1oovh;
+    background: linear-gradient(to right #485563, #29323c);
+}
+
+.container {
+    position: absolute;
+    max-width: 500px;
+    top: 50%;
+    left:50%;
+    transform: transate(-50%,-50%);
+    border: 1px soli white;
+    padding: 30px;
+}
