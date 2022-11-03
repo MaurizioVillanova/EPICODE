@@ -1,0 +1,34 @@
+.citta {
+    background-image: url(../img/pexels-aleksandar-pasaric-325185.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+$colore-primo: rgba(116,49,249,255);
+
+@mixin viola {
+    background-color: $colore-primo;
+    color: white;
+}
+
+nav{
+    @include viola;
+}
+
+#button {
+    @include viola;
+    border: transparent;
+}
+
+footer {
+    @include viola;
+}
+
+@mixin rosso {
+color: red;
+}
+
+.nav-link {
+    @include rosso;
+}
