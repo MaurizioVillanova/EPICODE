@@ -8,13 +8,20 @@ btn.addEventListener("click", function () {
   var text = document.createTextNode(todo);
   lista.appendChild(li);
   li.appendChild(text);
-  const buttonDelete = document.createElement('button');
-  buttonDelete.className = 'delete';
-  buttonDelete.appendChild(document.createTextNode('X'));    
+  const buttonDelete = document.createElement("button");
+  buttonDelete.className = "delete";
+  buttonDelete.appendChild(document.createTextNode("X"));
   li.appendChild(buttonDelete);
-  buttonDelete.addEventListener('click', (event) =>{
+  buttonDelete.addEventListener("click", (event) => {
     const parentNodeEl = event.target.parentNode;
-    setTimeout(() =>{
-        parentNodeEl.remove();
-    }, 500)})
+    parentNodeEl.style.display = "none";
+  });
+  const buttonDone = document.createElement("button");
+  buttonDone.className = "done";
+  buttonDone.appendChild(document.createTextNode("v"));
+  li.appendChild(buttonDone);
+  buttonDone.addEventListener("click", (event) => {
+    const parentNode2 = event.target.parentNode;
+    parentNode2.classList.toggle("done2");
+  });
 });

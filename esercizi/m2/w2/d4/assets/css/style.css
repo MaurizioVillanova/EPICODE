@@ -1,0 +1,21 @@
+body {
+  font-family: "Roborto ", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+#main-menu {
+  background-color: rgb(89, 12, 214);
+  font-style: oblique;
+  color: white;
+  height: 65px;
+}
+#main-menu li {
+  list-style-type: none;
+  align-items: center;
+}
+#main-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+}/*# sourceMappingURL=style.css.map */
