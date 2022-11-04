@@ -8,22 +8,22 @@
 
 $colore-primo: rgba(116,49,249,255);
 
-@mixin viola {
+@mixin violetto {
     background-color: $colore-primo;
     color: white;
 }
 
 nav{
-    @include viola;
+    @include violetto;
 }
 
 #button {
-    @include viola;
+    @include violetto();
     border: transparent;
 }
 
 footer {
-    @include viola;
+    @include violetto();
 }
 footer h4 {
     font-weight: lighter;
