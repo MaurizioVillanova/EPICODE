@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="contenitoredati">
+    <form >
+        <label for="nome">Nome</label>
+        <input type="text" id="nome"><br>
+        <label for="Cognome">Cognome</label>
+        <input type="text" id="cognome"><br>
+        <label for="date">Inserisci la tua data di nascita</label>
+        <input type="date" id="compleanno"><br>
+        <button type="button" id="mostra">Mostra dati</button>
+    </form>
+</div>
+<div id="contenitoretabella">
+    <table >
+        <caption>
+        <p>I miei dati</p>
+        </caption>
+        <thead>
+        <thead><tr><th>Nome</th><th>Età</th></tr>
+    </thead>
+    <tbody id="tabella">
+        
+    </tbody>
+</div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -33,7 +33,7 @@ document.getElementById('persona2').innerHTML = ` L'anno di nascita di Maria è 
 
 //funzione di funzione
 function ricettaTorta {
- var = (function() {
+ (function() {
     let fetteMela = 9;
     let fetteArancia = 15;
     let ricetta = `Torta con ${fetteMela} fette di mela e ${fetteArancia} fette di arancia ` ;

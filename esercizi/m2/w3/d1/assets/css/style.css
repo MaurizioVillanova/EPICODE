@@ -1,0 +1,16 @@
+
+#contenitoredati {
+    float: left;
+    width: 40%;
+}
+#contenitoretabellla
+{
+    float:left;
+    width: 50%;
+}
+th, td{
+    width: fit-content;
+}
+td {
+   border-color:1px solid black;
+}
