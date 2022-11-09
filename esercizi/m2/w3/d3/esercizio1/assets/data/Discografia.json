@@ -1,0 +1,113 @@
+{
+    "utenti":[
+        {
+            "id": 1,
+            "nome": "Lorenzo",
+            "cognome": "Ciarcianelli", 
+            "corso": 622
+        },
+        {
+            "id": 2,
+            "nome": "Gennaro",
+            "cognome": "Notaro", 
+            "corso": 622
+        },
+        {
+            "id": 3,
+            "nome": "Gulia",
+            "cognome": "Franzosi", 
+            "corso": 622
+        },
+        {
+            "id": 4,
+            "nome": "Maurizio",
+            "cognome": "Villanova", 
+            "corso": 622
+        },
+        {
+            "id": 5,
+            "nome": "Marco",
+            "cognome": "Brandi", 
+            "corso": 622
+        },
+        {
+            "id": 6,
+            "nome": "Giulio",
+            "cognome": "Tomè", 
+            "corso": 622
+        },
+        {
+            "id": 7,
+            "nome": "Marta",
+            "cognome": "Liguori", 
+            "corso": 622
+        },
+        {
+            "id": 8,
+            "nome": "Francesco",
+            "cognome": "Lisena", 
+            "corso": 622
+        },
+        {
+            "id": 9,
+            "nome": "Ewelina",
+            "cognome": "Cazja", 
+            "corso": 622
+        }
+    ],
+    "libri":[
+        {
+            "titolo": "uno, nessuno, centomila",
+            "autore": "Luigi Pirandello",
+            "annouscita": 1925
+        },
+        {
+            "titolo": "Il conte di Montecristo",
+            "autore": "Alexandre Dumas",
+            "annouscita": 1844
+        },
+        {
+            "titolo": "Dracula",
+            "autore": "Bram Stoker",
+            "annouscita": 1897
+        },
+        {
+            "titolo": "Il Signore degli Anelli",
+            "autore": "J.R.R. Tolkien",
+            "annouscita": 1954
+        }
+    ],
+    "film":[
+        { 
+            "titolo": "Blade Runner",
+            "regista": "Denis Villeneuve",
+            "genere": "Dramma",
+            "annouscita": 2017
+    },
+    { 
+            "titolo": "Django",
+            "regista": "Quentin Tarantino",
+            "genere": "Dramma",
+            "annouscita": 2017
+    },
+    { 
+            "titolo": "Blade Runner",
+            "regista": "Denis Villeneuve",
+            "genere": "Dramma",
+            "annouscita": 2012
+    },
+    { 
+            "titolo": "Quei Bravi Ragazzi",
+            "regista": "Martin Scorsese",
+            "genere": "Criminale",
+            "annouscita": 1990
+    },
+    { 
+            "titolo": "Scarface",
+            "regista": "Brian De Palma",
+            "genere": "Dramma, Criminale",
+            "annouscita": 1983
+    }
+            
+    ]
+}
