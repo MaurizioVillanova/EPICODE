@@ -1,0 +1,29 @@
+{
+  "elenco": [
+    {
+      "nome": "Gaetano",
+      "cognome": "Quarto",
+      "id": 1
+    },
+    {
+      "nome": "Alberto",
+      "cognome": "Scarsi",
+      "id": 2
+    },
+    {
+      "nome": "Luca",
+      "cognome": "Lattanzi",
+      "id": 3
+    },
+    {
+      "nome": "Maurizio",
+      "cognome": "Villanova",
+      "id": 5
+    },
+    {
+      "nome": "pingo",
+      "cognome": "pallinos",
+      "id": 6
+    }
+  ]
+}
