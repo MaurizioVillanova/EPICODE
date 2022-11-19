@@ -1,10 +1,15 @@
+var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
+    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+    return cooked;
+};
 function generazione() {
     var giocatore1 = Math.floor((Math.random() * 100) + 1);
     var giocatore2 = Math.floor((Math.random() * 100) + 1);
     var estratto = Math.floor((Math.random() * 100) + 1);
-    console.log(" 1: ".concat(giocatore1));
+    console.log("Numero giocatore 1: ".concat(giocatore1));
     console.log("Numero giocatore 2: ".concat(giocatore2));
-    console.log("Numero estratto: ".concat(estratto));
+    console.log(__makeTemplateObject(["(Numero estratto: ", ""], ["(Numero estratto: ", ""]), estratto);
+    ;
     confronto(giocatore1, giocatore2, estratto);
 }
 function confronto(giocatore1, giocatore2, estratto) {
