@@ -13,42 +13,41 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var bank = /** @class */ (function () {
-    function bank(_prelievo, _deposito, _contoCorrente) {
+var bank1 = /** @class */ (function () {
+    function bank1(_prelievo, _deposito, _contoCorrente) {
         this.prelievo = _prelievo;
         this.deposito = _deposito;
         this.contoCorrente = _contoCorrente;
     }
-    bank.prototype.prelevare = function () {
+    bank1.prototype.prelevare = function () {
         return this.contoCorrente = this.contoCorrente - this.prelievo;
     };
-    bank.prototype.depositare = function () {
+    bank1.prototype.depositare = function () {
         return this.contoCorrente = this.contoCorrente + this.deposito;
     };
-    bank.prototype.interessi = function () {
+    bank1.prototype.interessi = function () {
         return this.contoCorrente = this.contoCorrente + this.contoCorrente * 0.10;
     };
-    bank.prototype.prelievosecondo = function () {
-        return this.contoCorrente = this.contoCorrente - 5000;
-    };
-    return bank;
+    return bank1;
 }());
-var MauriBank = new bank(100, 200, 20000);
+var bank2 = /** @class */ (function (_super) {
+    __extends(bank2, _super);
+    function bank2() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    bank2.prototype.interessi = function () {
+        console.log('noooo');
+    };
+    return bank2;
+}(bank1));
+var MauriBank = new bank1(100, 200, 20000);
 console.log(MauriBank);
 console.log(MauriBank.interessi());
 console.log(MauriBank.prelevare());
 console.log(MauriBank.depositare());
-console.log(MauriBank.prelievosecondo());
-var bankdue = /** @class */ (function (_super) {
-    __extends(bankdue, _super);
-    function bankdue() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return bankdue;
-}(bank));
-var MauriBankdue = new bank(1000, 2000, 2000000);
-console.log(MauriBankdue);
-console.log(MauriBankdue.interessi());
-console.log(MauriBankdue.prelevare());
-console.log(MauriBankdue.depositare());
-console.log(MauriBankdue.prelievosecondo());
+var MauriBank2 = new bank2(200, 400, 1000000000);
+console.log(MauriBank2);
+console.log(MauriBank2.depositare());
+console.log(MauriBank2.prelevare());
+console.log(MauriBank2.interessi());
+console.log(MauriBank2.prelevare());
