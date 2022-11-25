@@ -136,7 +136,7 @@ btnSuby?.addEventListener('click', function(){
 var btnsubu=document.getElementById('btn404-2');
 var secCredres =  document.getElementById('print404-2')as HTMLElement;
 btnsubu?.addEventListener('click', function(){
-sim2.credito = (parseInt(saldoPrimo.value))
+sim2.credito = (parseInt(saldoSec.value))
 console.log(sim2)
 secCredres.innerHTML = `${sim2.credito}`;
 })
@@ -144,6 +144,46 @@ var btnsubo=document.getElementById('azzeraChiamate2');
 var azzChiamsec = document.getElementById('azzChiam2')as HTMLElement;
 btnsubo?.addEventListener('click', function(){
 sim2.azzeraChiamate();
-azzChiamsec.innerHTML = `${sim1.getNumeroChiamate()}`;
+azzChiamsec.innerHTML = `${sim2.getNumeroChiamate()}`;
 console.log(sim2)
+} )
+//Sim3
+
+var btnSubsim=document.getElementById('register3');
+   
+var saldoTer=document.getElementById('formRicaricaIniziale3')as HTMLInputElement;
+btnSubsim?.addEventListener('click',function (){
+    sim3.credito = (parseInt(saldoTer.value))
+console.log(sim3)
+ 
+ 
+})
+
+
+var btnSubsal=document.getElementById('btnRicarica3')
+var ricaricaTer = document.getElementById('formRicarica3') as HTMLInputElement;
+btnSubsal?.addEventListener('click', function() {
+    sim3.ricarica(parseInt(ricaricaTer.value))
+console.log(sim3)
+}) 
+var btnSubim= document.getElementById('btnChiama3');
+var chiamataTer = document.getElementById('formChiamata3')as HTMLInputElement;
+btnSubim?.addEventListener('click', function(){
+    sim3.chiamata(parseInt(chiamataTer.value))
+    console.log(sim3)
+} )
+
+var btnsuboz=document.getElementById('btn404-3');
+var tercCredres =  document.getElementById('print404-3')as HTMLElement;
+btnsuboz?.addEventListener('click', function(){
+sim3.credito = (parseInt(saldoTer.value))
+console.log(sim3)
+tercCredres.innerHTML = `${sim3.credito}`;
+})
+var btnsubab=document.getElementById('azzeraChiamate3');
+var azzChiamter = document.getElementById('azzChiam3')as HTMLElement;
+btnsubab?.addEventListener('click', function(){
+sim3.azzeraChiamate();
+azzChiamter.innerHTML = `${sim3.getNumeroChiamate()}`;
+console.log(sim3)
 } )
