@@ -9,10 +9,10 @@ export class ToDoListComponent implements OnInit {
 
   constructor() { }
 
-  datas!: Todo[];
+  datas: Todo[] = []
 
-  ngOnInit() {
-    fetch( 'assets/todo.json').then((response)=> response.json()).then((data) => {
+  ngOnInit() {// si mette il codice iniziale che si applicano quando la pagina viene caricata
+    fetch('https://jsonplaceholder.typicode.com/todos').then((response)=> response.json()).then((data) => {
       this.datas = data;
       console.log(data);
     })

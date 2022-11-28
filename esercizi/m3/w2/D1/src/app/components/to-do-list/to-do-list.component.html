@@ -1,3 +1,5 @@
-<li [todo]!="data" *ngFor="let data of datas; index as i">
+<ul>
+<li  *ngFor="let data of datas; index as i">
   {{i}}/{{data.id + ' ' +data.title + ' ' +data.completed}}
 </li>
+</ul>
