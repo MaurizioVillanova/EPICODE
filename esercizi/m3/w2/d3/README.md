@@ -1,27 +1,36 @@
-# D3
+# epicode-esercizi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
+1) db.json: aggiungere il tipo a tutti gli oggetti
 
-## Development server
+{
+        "id":1,
+        "body":"Sit minim deserunt enim enim nisi. Eiusmod incididunt dolore et ea anim. Non exercitation id voluptate et velit quis anim officia fugiat esse laborum nisi fugiat non.",
+        "title":"Dolor velit sint tempor culpa cupidatat ipsum do ad tempor eiusmod.",
+        "active":true,
+        "type": "education"
+    }
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2) interfaccia: aggiungere il tipo all'interfaccia, indifferentemente stringa o tipo definito
 
-## Code scaffolding
+export interface Post{
+    id:number,
+    title:string,
+    body:string,
+    active:boolean,
+    type: 'news' | 'politic' | 'education' oppure type: string
+}
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3) nel service aggiungere un metodo per la modifica dei post
 
-## Build
+4) active-posts chiamerà il metodo di modifica cambiando la proprietà active da true a false
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+5) inactive-posts chiamerà il metodo di modifica cambiando la proprietà active da false a true
 
-## Running unit tests
+6) l'HTML di post-card conterrà la direttiva built-in [ngclass] per aassegnare colori alle card in funzione del loro tipo
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[ngClass]="{
+        'bg-warning': post.type == 'news',
+        'bg-info': post.type == 'education',
+        'bg-dark': post.type == 'politic',
+        'text-white': post.type == 'politic'
+      }"

@@ -4,5 +4,4 @@ export interface Post{
     body:string,
     active:boolean,
     type: 'news' | 'politic' | 'education'
-
 }
