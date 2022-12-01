@@ -20,7 +20,7 @@ import { getPosts } from '../posts.service';
       <p class= "card-text">
       {{posts.body}}
     </p>
-    <ng-content></ng-content>
+    <ng-content></ng-content><!-- INIEZIONE DI CONTENUTO
     </div>
     </div>
     `,
