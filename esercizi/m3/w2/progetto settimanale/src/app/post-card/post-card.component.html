@@ -7,5 +7,5 @@
     <ng-content></ng-content>
 
     <button class="btn btn-danger" (click)="elimina()">Elimina</button>
-    <button [routerLink]="['/dettaglio']" routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}" class="btn btn-primary" (click)="elimina()">dettaglio</button>
+    <button routerLink='/dettaglio/{{p.id}}' routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}" class="btn btn-primary">dettaglio</button>
 </div>

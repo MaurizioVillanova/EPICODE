@@ -92,4 +92,15 @@ export class PostService {
     })
     return t
   }
+
+  fetchPostt(id:number){
+    let fe=fetch("http://localhost:3000/posts/"+id,
+
+    )
+    let s=fe.then(res=>{
+
+      return res.json()
+    })
+    return s
+  }
 }

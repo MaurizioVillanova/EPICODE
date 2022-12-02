@@ -29,7 +29,7 @@ const routes: Routes = [
       component: UsersInfoComponent
    },
   {
-    path: "dettaglio",
+    path: "dettaglio/:id",
     component: DettaglioComponent
       }
 
