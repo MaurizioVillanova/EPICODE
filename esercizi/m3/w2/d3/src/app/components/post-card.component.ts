@@ -24,6 +24,7 @@ import { getPosts } from '../posts.service';
     </div>
     </div>
     `,
+    
   styles: [
   ]
 })
