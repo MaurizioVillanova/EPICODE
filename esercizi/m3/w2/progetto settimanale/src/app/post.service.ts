@@ -1,19 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Post } from './post';
-import { Utente } from './utente';
+import { Users } from './users';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
-  fetchUser(autore:string) {
-    fetch("http://localhost:3000/users"+ autore).then(res=>res.json()).then(res=>{
-      this.user = res
-    })
-    return this.user
-  }
+
   private posts:Post[] = []
-  user!:Utente
+  private users:Users[]=[]
   //i dati che vengono letti quando carichiamo una delle pagine
 
   constructor() { }
@@ -23,6 +19,7 @@ export class PostService {
       this.posts = res
     })
   }
+
 
   getPostsFiltrati(a:boolean) {
     return this.posts.filter(p=>p.active==a)
@@ -43,15 +40,17 @@ export class PostService {
   }
 
   toggleDbPost(id:number) {
-
+    //QUA USO LO SPREAD OPERATOR PERCHÈ VOGLIO UNA COPIA DELL'ELEMENTO TROVATO E NON DIRETTAMENTE QUELLO DELL'ARRAY
+    //IL METODO .FIND() RESTITUISCE L'OGGETTO DELL'ARRAY, MODIFICARE postDiArray MODIFICA L'ELEMENTO INTERNO A THIS.POSTS
     let postDiArray = this.posts.find(p=>p.id==id)
     let postClone = {...postDiArray}
     if(postDiArray == undefined) {
       throw new Error("Elemento non trovato")
     }
-
+    //SE FACESSIMO QUESTA OPERAZIONOE SU postDiArray AVREMMO GIÀ MODIFICATO L'ARRAY THIS.POSTS SENZA PERÒ ESSERE SICURI DI AVER AVUTO UN SUCCESSO CON IL FETCH
+    //QUINDI USO LA VARIABILE "CLONE" DELL'ELEMENTO TROVATO COSÌ CHE LA MODIFICA VENGA FATTA DAL METODO toggleServicePost COME ABBIAMO VISTO INSIEME
     postClone.active = !postClone.active
-
+    //QUESTA MODIFICA SERVE PER PASSARE IL POST MODIFICATO AL FETCH PER MODIFICARE IL DB, SOLO AL COMPLETAMENTO CI VA BENE MODIFICARE THIS.POSTS
     return fetch("http://localhost:3000/posts/"+id, {
       method:"PUT",
       headers: {
@@ -82,49 +81,15 @@ export class PostService {
   private deleteService(id:number) {
     this.posts = this.posts.filter(e=>e.id != id)
   }
-}
 
+  fetchUser(id:number){
+    let f=fetch("http://localhost:3000/users/"+id,
 
-  export async function getPosts(){
+    )
+    let t=f.then(res=>{
 
-    return await (await fetch('assets/db.json')).json()
- }
- var posts:Post[]=[]
-  function assegnaPost (){
- getPosts().then((res)=>{
- posts = res;
- })
+      return res.json()
+    })
+    return t
   }
- export function ottieniPost(){
-   return posts;
- }
- export function updatePosts(data:Partial<Post>, id: number){
-   getPosts().then((post) => {
-     post = posts.map(post => post.id == id? {...post, ...data} : post)
-     return posts.find(post => post.id == id) as Post})
- }
-
-
-
-/*import { Post } from "./models/post"
-export async function getPosts(){
-
-   return await (await fetch('assets/db.json')).json()
 }
-var posts:Post[]=[]
- function assegnaPost (){
-getPosts().then((res)=>{
-posts = res;
-})
- }
-export function ottieniPost(){
-  return posts;
-}
-export function updatePosts(data:Partial<Post>, id: number){
-  getPosts().then((post) => {
-    post = posts.map(post => post.id == id? {...post, ...data} : post)
-    return posts.find(post => post.id == id) as Post})
-}
-*/
-
-

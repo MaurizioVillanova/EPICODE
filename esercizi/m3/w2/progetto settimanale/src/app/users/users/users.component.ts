@@ -1,19 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { Utente } from 'src/app/utente';
-import { ActivatedRoute } from '@angular/router';
+import { Users } from 'src/app/users';
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
-  users:Utente[]=[]
-
-  constructor( private route : ActivatedRoute){ }
+  users:Users[]=[]
+  constructor(){ }
 
   ngOnInit(): void {
     this.fetchUsers()
-
   }
 
   fetchUsers() {
@@ -21,10 +18,10 @@ export class UsersComponent implements OnInit {
       this.users = res
 
     })
-
   }
 
 
 
 
 }
+

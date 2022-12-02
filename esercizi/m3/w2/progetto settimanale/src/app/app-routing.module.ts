@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {  RouterModule, Routes } from '@angular/router';
 import { ActivePostsComponent } from './active-posts/active-posts.component';
-import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
-import { UserInfoComponent } from './components/user-info/user-info.component';
-import { UsersComponent } from './components/users/users.component';
 import { HomeComponent } from './home/home.component';
 import { InactivePostsComponent } from './inactive-posts/inactive-posts.component';
+import { DettaglioComponent } from './dettaglio/dettaglio/dettaglio.component';
+import { UsersComponent } from './users/users/users.component';
+import { UsersInfoComponent } from './usersInfo/users-info/users-info.component';
 
 const routes: Routes = [
   {
@@ -22,19 +22,15 @@ const routes: Routes = [
   },
   {
     path: "users",
-    component: UsersComponent,
-    children:[{
-      path:"users/info/:autore",
-      component: UserInfoComponent
-  }]
+    component: UsersComponent
   },
+   {
+      path:"info/:id",
+      component: UsersInfoComponent
+   },
   {
     path: "dettaglio",
     component: DettaglioComponent
-      },
-     {
-        path:"**",
-        redirectTo: ""
       }
 
 ];

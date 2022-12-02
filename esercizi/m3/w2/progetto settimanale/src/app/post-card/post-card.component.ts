@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output , } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Post } from '../post';
+
 
 @Component({
   selector: 'app-post-card',
@@ -12,7 +13,7 @@ export class PostCardComponent implements OnInit {
 
   @Input() p!:Post
 
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit(): void {
   }

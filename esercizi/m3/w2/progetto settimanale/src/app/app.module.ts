@@ -7,11 +7,15 @@ import { HomeComponent } from './home/home.component';
 import { ActivePostsComponent } from './active-posts/active-posts.component';
 import { InactivePostsComponent } from './inactive-posts/inactive-posts.component';
 import { PostCardComponent } from './post-card/post-card.component';
-import { MaiuscoloPipe } from './pipes/maiuscolo.pipe';
-import { EvidenziaDirective } from './directives/evidenzia.directive';
-import { DettaglioComponent } from './components/dettaglio/dettaglio.component';
-import { UsersComponent } from './components/users/users.component';
-import { UserInfoComponent } from './components/user-info/user-info.component';
+import { MaiuscoloPipe } from './pipe/maiuscolo.pipe';
+import { ColoraDirective } from './directives/colora.directive';
+import { DettaglioComponent } from './dettaglio/dettaglio/dettaglio.component';
+import { UsersComponent } from './users/users/users.component';
+import { UsersInfoComponent } from './usersInfo/users-info/users-info.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -21,10 +25,12 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
     InactivePostsComponent,
     PostCardComponent,
     MaiuscoloPipe,
-    EvidenziaDirective,
+    ColoraDirective,
     DettaglioComponent,
     UsersComponent,
-    UserInfoComponent
+    UsersInfoComponent,
+
+
   ],
   imports: [
     BrowserModule,

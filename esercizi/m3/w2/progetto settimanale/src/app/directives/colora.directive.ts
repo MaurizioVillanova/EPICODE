@@ -1,11 +1,11 @@
 import { Directive, Input, HostBinding } from '@angular/core';
 
 @Directive({
-  selector: '[appEvidenzia]'
+  selector: '[appColora]'
 })
-export class EvidenziaDirective {
+export class ColoraDirective {
 
-@Input('appEvidenzia') newColor : string = 'yellow'
+@Input('appColora') newColor : string = 'yellow'
 @HostBinding('style.background-color') color: string ='yellow';
   constructor() { }
 

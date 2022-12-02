@@ -10,5 +10,4 @@ export class MaiuscoloPipe implements PipeTransform {
     return maiuscolo;
   }
 
-
 }

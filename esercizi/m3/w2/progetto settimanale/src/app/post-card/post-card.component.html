@@ -1,10 +1,11 @@
 <div class="card">
-  <div class="m-3" > <h5><span appEvidenzia="yellow" class="card-header d-inline "> {{p.id}} Titolo</span></h5></div>
+    <h5 class="card-header"><span appColora>{{p.id}}</span></h5>
     <div class="card-body">
-        <h5 class="card-title">{{p.title | maiuscolo  }}</h5>
-        <p class="card-text">{{p.body }}</p>
+        <h5 class="card-title">{{p.title | maiuscolo}}</h5>
+        <p class="card-text">{{p.body}}</p>
     </div>
     <ng-content></ng-content>
-    <span class="btn btn-primary"  [routerLink]="['/dettaglio']" routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}" >Dettaglio</span>
+
     <button class="btn btn-danger" (click)="elimina()">Elimina</button>
+    <button [routerLink]="['/dettaglio']" routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}" class="btn btn-primary" (click)="elimina()">dettaglio</button>
 </div>
