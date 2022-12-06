@@ -37,18 +37,25 @@
           </div>
         </div>
         <div formArrayName="pianeta" class="m-3">
-        <h3>Pianeta</h3>
-        <button type="button" (click)="addPianeta()" class="btn btn-info">Aggiungi Pianeta</button>
-        <div class="form-group m-3" *ngFor="let pianetaC of getPianetaF(); let i = index">
-          <input type="text" class="form-control" [formControlName]="i">
-        </div>
+          <h3>Pianeta</h3>
+          <button type="button" (click)="addPianeta()" class="btn btn-info">Aggiungi Pianeta</button>
+          <div class="form-group m-3" *ngFor="let pianetaC of getPianetaF(); let i = index">
+            <input type="text" class="form-control" [formControlName]="i">
+          </div>
         </div>
         <div formArrayName="nemico" class="m-3">
-        <h3>NEMICO</h3>
-        <button type="button" (click)="addNemico()" class="btn btn-info">Aggiungi Nemico</button>
-        <div class="form-group m-3" *ngFor="let nemicoC of getNemicoF(); let i = index">
-          <input type="text" class="form-control" [formControlName]="i">
+          <h3>NEMICO</h3>
+          <button type="button" (click)="addNemico()" class="btn btn-info">Aggiungi Nemico</button>
+          <div class="form-group m-3" *ngFor="let nemicoC of getNemicoF(); let i = index">
+            <input type="text" class="form-control" [formControlName]="i">
+          </div>
         </div>
+        <div formArrayName="debolezza" class="m-3">
+          <h3>Debolezze</h3>
+          <button type="button" (click)="addDebolezza()" class="btn btn-info">Aggiungi Debolezze</button>
+          <div class="form-group m-3" *ngFor="let debolezzaC of getDebolezzaF(); let i = index">
+            <input type="text" class="form-control" [formControlName]="i">
+          </div>
         </div>
         <button type="submit" (click)="submit()" class="btn btn-info">Invia</button>
 

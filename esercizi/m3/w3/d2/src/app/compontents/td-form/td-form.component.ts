@@ -14,15 +14,16 @@ userForm = {//creiamo oggetto
   alterego: '',
   potere: '',
   pianeta : '',
-  nemico:''
-
+  nemico:'',
+debolezza: ''
 }
 user = {//creiamo oggetto
   defUsername: '',
   alterego: '',
   potere: '',
   pianeta : '',
-  nemico:''
+  nemico:'',
+  debolezza:''
 
 }
 
@@ -35,7 +36,7 @@ ngOnInit(): void {
 }
 
 submit(){
-  console.log('Form inviato: ', this.form, '- Nome: ', this.form.value.userInfo.defUsername, '- AlterEgo: ' , this.form.value.userInfo.alterego, '- Potere: ', this.form.value.userInfo.potere, '- Nemico: ', this.form.value.userInfo.nemico, '- Pianeta: ', this.form.value.userInfo.pianeta);
+  console.log('Form inviato: ', this.form, '- Nome: ', this.form.value.userInfo.defUsername, '- AlterEgo: ' , this.form.value.userInfo.alterego, '- Potere: ', this.form.value.userInfo.potere, '- Nemico: ', this.form.value.userInfo.nemico, '- Pianeta: ', this.form.value.userInfo.pianeta, '-Debolezza: ', this.form.value.userInfo.debolezza);
 
 
 }

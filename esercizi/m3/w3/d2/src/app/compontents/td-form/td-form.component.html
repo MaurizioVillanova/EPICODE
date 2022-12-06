@@ -33,6 +33,10 @@
       <label for="nemico">Nemico</label>
       <input type="text" id="nemico" [ngModel]="userForm.nemico" name="nemico" class="form-control">
     </div>
+    <div class="form-group">
+      <label for="debolezza">Debolezza</label>
+      <input type="text" id="debolezza" [ngModel]="userForm.debolezza" name="debolezza" class="form-control">
+    </div>
     <button type="submit" class="btn btn-primary m-2" [disabled]="form.invalid">Invia</button>
     <!--dove f è #f l'intero form, e finché non è attivato tutto il form non si attiva il button-->
   </div>

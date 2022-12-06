@@ -33,7 +33,8 @@ ngOnInit(): void {
 
       poteri: this.fb.array([]),
       pianeta: this.fb.array([]),
-      nemico: this.fb.array([])
+      nemico: this.fb.array([]),
+      debolezza: this.fb.array([])
 
   });
   this.form.valueChanges.subscribe(value => {
@@ -69,6 +70,13 @@ getPianetaF(){
     const control = this.fb.control(null);
     return (this.form.get('nemico') as FormArray).push(control);
     }
+    getDebolezzaF(){
+      return (this.form.get('debolezza') as FormArray).controls
+      }
+      addDebolezza(){
+      const control = this.fb.control(null);
+      return (this.form.get('debolezza') as FormArray).push(control);
+      }
 submit(){
 console.log(this.form);
 //this.form.reset();
