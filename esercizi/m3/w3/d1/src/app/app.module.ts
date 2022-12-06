@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-
-import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AppComponent } from './app.component';
-import { CardComponent } from './components/card/card.component';
-import { ListCardComponent } from './components/list-card/list-card.component';
+import { FavoritesComponent } from './favorites.component';
+import { ErrorsInterceptor } from './errors.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent,
-    ListCardComponent
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS,
+    useClass:ErrorsInterceptor,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
