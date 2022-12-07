@@ -12,7 +12,7 @@
 
     <div class="form-group">
       <label for="alterego">Alter Ego</label>
-      <input type="text" id="alterego" [ngModel]="userForm.alterego" name="alterego" class="form-control" required #alterego="ngModel">
+      <input type="text" id="alterego" [ngModel]="userForm.alterego" name="alterego" class="form-control" maxlength="10" required #alterego="ngModel">
     </div>
     <p *ngIf="alterego.invalid && alterego.touched"><strong>Questo campo è obbligatorio</strong></p>
     <div class="form-group">

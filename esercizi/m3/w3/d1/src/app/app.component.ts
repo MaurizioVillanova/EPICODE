@@ -33,7 +33,7 @@ import { PhotosService } from './photos.service';
   <span class="visually-hidden">Loading...</span>
 </div>
     </ng-template>
-    
+
   `,
   styles: [``],
 })

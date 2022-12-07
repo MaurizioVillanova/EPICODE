@@ -1,0 +1,4 @@
+<p *ngIf="!user; else welcome">home works!</p>
+<ng-template #welcome>
+    Welcome {{user!.email}}
+</ng-template>
