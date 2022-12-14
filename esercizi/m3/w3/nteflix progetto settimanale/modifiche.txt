@@ -1,0 +1,1 @@
+Modificare chiamata recupero utenti per leggere il json e non l'array locale
